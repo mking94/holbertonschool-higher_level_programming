@@ -2,10 +2,10 @@
 def new_in_list(my_list, idx, element):
     b = []
     for i in range(len(my_list)):
-        b.insert(i,my_list[i])
+        b.insert(i, my_list[i])
     if(idx < 0):
         return (my_list)
-    elif(idx > len(my_list)):
+    elif(idx > len(my_list) - 1):
         return (my_list)
     else:
         b[idx] = element
