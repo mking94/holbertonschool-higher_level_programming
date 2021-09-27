@@ -7,5 +7,5 @@ def safe_print_list_integers(my_list=[], x=0):
             leng += 1
         except (ValueError, TypeError):
             break
-    print("\n", end="")
+    print("")
     return leng
