@@ -3,7 +3,6 @@ def safe_print_integer(value):
     try:
         value += 1
         print("{:d}".format(value - 1))
-        return(True)
+        return(bool(1))
     except BaseException:
-        print("{} is not an integer".format(value))
-        return(False)
+        return(bool(0))
