@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+
 class Square:
-    __size
-    def __init__(self,size):
-        self.size = size
+    """
+    class Square with private instance attribute size
+    """
+    def __init__(self, size):
+        """
+        Initialise size
+        """
+        self.__size = size
