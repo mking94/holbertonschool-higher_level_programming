@@ -3,6 +3,7 @@
 define a class
 """
 
+
 class Square:
     """
 empty class square
