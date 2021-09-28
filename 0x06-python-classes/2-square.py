@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+
+
 class Square:
-    __size
+    """
+    class Square with private instance attribute size
+    """
     def __init__(self, size=0):
+    """
+    Initialize size
+    """
         try:
             size += 1
             if (size - 1) < 0:
