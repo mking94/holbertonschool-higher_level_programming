@@ -1,0 +1,35 @@
+
+FouedDadi
+/
+holbertonschool-higher_level_programming
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+holbertonschool-higher_level_programming/0x07-python-test_driven_development/tests/3-say_my_name.txt
+@FouedDadi
+FouedDadi all
+ 1 contributor
+17 lines (12 sloc)  390 Bytes
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+--  first_name is not string
+>>> say_my_name(20, "jhon")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+
+--  last_name is not string
+>>> say_my_name("jhon", 20)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+
+--  first_name is not string
+>>> say_my_name("Bob")
+My name is Bob 
