@@ -8,8 +8,10 @@ class Rectangle:
     attr1(width): width of rectangle
     attr2(height): height of rectangle
     attr3(number_of_instances): number of instances
+    attr4(print_symbol): symbol for representation
     """
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -24,7 +26,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Sets the height of the class instance"""
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -38,7 +40,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """Sets the width of the class instance"""
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -61,7 +63,7 @@ class Rectangle:
             return stringrep
         for row in range(self.__height):
             for column in range(self.__width):
-                stringrep += "#"
+                stringrep += str(self.print_symbol)
             if row < self.__height - 1:
                 stringrep += "\n"
         return stringrep
@@ -72,6 +74,5 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Finalizer when instance is deleted"""
-        type(self).number_of_instances -= 1
         print("Bye rectangle...")
+        Rectangle.number_of_instances += -1
