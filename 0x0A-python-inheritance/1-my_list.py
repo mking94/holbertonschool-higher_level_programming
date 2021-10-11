@@ -2,7 +2,8 @@
 """ Defines an inherited list class MyList """
 
 class MyList(list):
-"""Implements sorted printing for the built-in list class."""
+    """Implements sorted printing for the built-in list class."""
+
     def print_sorted(self):
-        """print a sorted list"""
+        """Print a list in sorted ."""
         print(sorted(self))
