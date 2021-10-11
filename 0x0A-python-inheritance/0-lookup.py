@@ -1,7 +1,7 @@
 """Defines an object attribute lookup function."""
 
 def lookup(obj):
-    list = []
+    liste = []
     for attributes in dir(obj):
-        list.append(attributes)
-    return list
+        liste.append(attributes)
+    return liste
