@@ -4,11 +4,11 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ Square Module """
+    """ Square class"""
 
     def __init__(self, size):
         """
-        Init function
+        Constructor
         """
         self.integer_validator("size", size)
         self.__size = size
@@ -20,4 +20,3 @@ class Square(Rectangle):
     def __str__(self):
         """prints the Square description"""
         return "[Square] {}/{}".format(self.__size, self.__size)
-© 2021 GitHub, Inc.
