@@ -1,12 +1,10 @@
 #!/usr/bin/node
-let n = process.argv[2];
-let r = 1;
-if (isNaN(n)) {
-  console.log('1');
-  process.exit(1);
+const n = process.argv[2];
+function factorial (n) {
+  if (isNaN(n) || x === 1) {
+    return (1);
+  } else {
+    return (n * factorial(n - 1));
+  }
 }
-n = Number(n);
-while (n > 0) {
-  r *= n--;
-}
-console.log(r);
+console.log(factorial(Number(x)));
