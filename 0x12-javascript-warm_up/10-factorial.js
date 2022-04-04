@@ -6,5 +6,7 @@ if (isNaN(n)) {
   process.exit(1);
 }
 n = Number(n);
-while (n > 0) r *= n--;
+while (n > 0) {
+  r *= n--;
+}
 console.log(r);
