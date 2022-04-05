@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const square1 = require('./5-square');
+const square1 = require('./5-square.js');
 module.exports = class Square extends square1 {
   charPrint (c) {
     const line = new Array(Number(this.width)).fill((c || 'X'));
