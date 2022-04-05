@@ -6,11 +6,7 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c) {
-      const line = new Array(Number(this.size)).fill(c);
-    } else {
-      const line = new Array(Number(this.size)).fill('X');
-    }
+    const line = new Array(Number(this.size)).fill((c || "X"));
     for (let i = 0; i < this.size; i++) {
       console.log(line.join(''));
     }
