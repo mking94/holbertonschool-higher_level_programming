@@ -1,2 +1,2 @@
-#!/usr/bin/nano
+#!/usr/bin/node
 module.exports = class Rectangle {};
