@@ -9,7 +9,9 @@ module.exports = class Rectangle {
 
   print () {
     const line = new Array(Number(this.width)).fill('X');
-    console.log((line.join('')+'\n').repeat(Number(this.height)));
+    for (let i = 0; i < this.height; i++) {
+      console.log(line.join(''));
+    }
   }
 
   rotate () {
