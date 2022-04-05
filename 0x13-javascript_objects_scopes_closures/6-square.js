@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
-module.exports = class Square extends Rectangle {
+const square = require('./5-square');
+module.exports = class Square extends square {
   charPrint (c) {
     const line = new Array(Number(this.width)).fill((c || 'X'));
     for (let i = 0; i < this.height; i++) {
