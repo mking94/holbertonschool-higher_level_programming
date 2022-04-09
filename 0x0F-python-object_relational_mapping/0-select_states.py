@@ -6,8 +6,8 @@ import MySQLdb
 from sys import argv
 if __name__ == "__main__":
     db_cnx = MySQLdb.connect(
-        host="localhost",user=argv[1],
-        password=argv[2],database=argv[3],
+        host="localhost", user=argv[1],
+        password=argv[2], database=argv[3],
         charset="utf8")
     cursor = db_cnx.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id")
