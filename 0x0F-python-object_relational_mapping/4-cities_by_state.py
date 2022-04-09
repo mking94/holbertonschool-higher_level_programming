@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""lists all cities from the database hbtn_0e_4_usa """
+"""
+lists all cities from the database hbtn_0e_4_usa
+"""
 
 if __name__ == '__main__':
 
@@ -17,4 +19,3 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     for row in rows:
         print(row)
-    
