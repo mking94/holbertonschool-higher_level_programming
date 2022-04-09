@@ -9,7 +9,7 @@ if __name__ == "__main__":
         host="localhost",
         user=argv[1],
         password=argv[2],
-        database=argv[3],
+        database=argv[3]
     )
     cursor = db_cnx.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id")
