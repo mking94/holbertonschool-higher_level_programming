@@ -13,9 +13,9 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name\
-                FROM cities LEFT JOIN states\
+                FROM cities JOIN states\
                 ON states.id = cities.state_id\
-                Where states.name =%s\
+                Where states.name = %s\
                 ORDER BY cities.id ASC", (sys.argv[4], ))
     rows = cur.fetchall()
     for row in rows:
