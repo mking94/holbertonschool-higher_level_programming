@@ -14,7 +14,7 @@ if __name__ == "__main__":
         database=sys.argv[3]
     )
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * from states ORDER BY id;")
+    cursor.execute("SELECT * from states;")
     liste = cursor.fetchall()
     for row in liste:
         print(row)
