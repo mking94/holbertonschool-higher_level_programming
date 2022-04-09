@@ -18,4 +18,7 @@ if __name__ == '__main__':
                 Where states.name = %s\
                 ORDER BY cities.id ASC", (sys.argv[4], ))
     rows = cur.fetchall()
-    print(", ".join([row[0] for row in rows]))
+    if rows == ():
+        print("")
+    else:
+        print(", ".join([row[0] for row in rows]))
