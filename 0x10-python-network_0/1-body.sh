@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Send get request and display the statut code 
-curl -sL "$1"
+curl -s -o /dev/Null -w "%{http_code}" "$1"
