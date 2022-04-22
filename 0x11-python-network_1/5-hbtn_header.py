@@ -4,8 +4,6 @@
 import requests
 import sys
 
-if len(sys.argv) != 2:
-    print("Check the argument")
-else:
-    res = requests.get(url=sys.argv[1])
+if __name__ == '__main__':
+    res = requests.get(sys.argv[1])
     print(res.headers['X-Request-Id'])
