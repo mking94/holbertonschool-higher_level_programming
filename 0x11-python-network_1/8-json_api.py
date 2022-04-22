@@ -5,14 +5,14 @@ import requests
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         d = {"q": sys.argv[1]}
-    else:
-        d = {"q": ""}
-    req = requests.post("http://0.0.0.0:5000/search_user", data=d)
-    try:
+        req = requests.post("http://0.0.0.0:5000/search_user", data=d)
+        try:
         json = req.json()
         if json:
             print("[{}] {}".format(json.get("id"), json.get("name")))
         else:
             print("No result")
-    except BaseException:
+    except:
         print("Not a valid JSON")
+    else:
+        print("No result")
