@@ -8,9 +8,7 @@ import sys
 if len(sys.argv) != 3:
     print("Check the argument")
 else:
-    d = p.urlencode({"email": sys.argv[2]})
-    d = d.encode("ascii")
+    d = p.urlencode({"email": sys.argv[2]}).encode("ascii")
     rq = req.Request(sys.argv[1], d)
-    r = request.urlopen(rq)
-    with r.read() as res:
-        print(res.decode("utf-8"))
+    with request.urlopen(rq) as res:
+        print(res.read().decode("utf-8"))
