@@ -11,6 +11,6 @@ else:
     d = p.urlencode({"email": sys.argv[2]})
     d = d.encode("ascii")
     r = req.Request(url=sys.argv[1], method="POST")
-    r = request.urlopen(r)
+    r = request.urlopen(r, d)
     with r.read() as res:
         print(res.decode("utf-8"))
