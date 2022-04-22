@@ -2,7 +2,6 @@
 """ Python script that send request to an URL and print response """
 
 import requests
-import sys
 
 res = requests.get(url="https://intranet.hbtn.io/status")
 print("Body response:")
