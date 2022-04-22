@@ -5,7 +5,7 @@ import urllib.request as req
 import sys
 
 if len(sys.argv) != 2:
-	print("Check the argument")
+    print("Check the argument")
 else:
-	with req.urlopen(url = sys.argv[1]) as r:
-		print(r.getheader("X-Request-Id"))
+    with req.urlopen(url=sys.argv[1]) as r:
+        print(r.getheader("X-Request-Id"))
