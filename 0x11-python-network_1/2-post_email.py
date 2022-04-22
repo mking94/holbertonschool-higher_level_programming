@@ -6,11 +6,11 @@ import urllib.parse as p
 import sys
 
 if len(sys.argv) != 3:
-	print("Check the argument")
+    print("Check the argument")
 else:
-	d = p.urlencode({"email": sys.argv[2]})
-	d = d.encode("ascii")
-	r = req.Request(url = sys.argv[2], method = "POST")
-	r = request.urlopen(req,d)
-	with r.read() as res:
-		print(res.decode("utf-8"))
+    d = p.urlencode({"email": sys.argv[2]})
+    d = d.encode("ascii")
+    r = req.Request(url=sys.argv[2], method="POST")
+    r = request.urlopen(req, d)
+    with r.read() as res:
+        print(res.decode("utf-8"))
