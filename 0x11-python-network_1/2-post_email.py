@@ -5,9 +5,12 @@ import urllib.request as req
 import urllib.parse as p
 import sys
 
-d = p.urlencode({"email": sys.argv[2]})
-d = d.encode("ascii")
-r = req.Request(url=sys.argv[1], d)
-r = request.urlopen(req)
-with r.read() as res:
-    print(res.decode("utf-8"))
+if len(sys.argv) != 3:
+    print("Check the argument")
+else:
+    d = p.urlencode({"email": sys.argv[2]})
+    d = d.encode("ascii")
+    r = req.Request(url=sys.argv[1], method="POST")
+    r = request.urlopen(r)
+    with r.read() as res:
+        print(res.decode("utf-8"))
