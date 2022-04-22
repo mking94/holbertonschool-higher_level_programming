@@ -6,13 +6,10 @@ import urllib.parse as p
 import sys
 
 if len(sys.argv) != 2:
-	print("Check the argument")
+    print("Check the argument")
 else:
-	if req.urlopen(sys.argv[1]).getcode() == 200:
-		with req.urlopen(sys.argv[1]) as r:
-			print(r.read().decode("utf-8"))
-	else:
-		print("Error code: {}".format(req.urlopen(sys.argv[1]).getcode()))
-		
-		
-
+    if req.urlopen(sys.argv[1]).getcode() == 200:
+        with req.urlopen(sys.argv[1]) as r:
+            print(r.read().decode("utf-8"))
+    else:
+        print("Error code: {}".format(req.urlopen(sys.argv[1]).getcode()))
