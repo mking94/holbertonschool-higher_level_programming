@@ -10,7 +10,7 @@ if len(sys.argv) != 3:
 else:
     d = p.urlencode({"email": sys.argv[2]})
     d = d.encode("ascii")
-    rq = req.Request(url=sys.argv[1], data=d)
+    rq = req.Request(sys.argv[1], d)
     r = request.urlopen(rq)
     with r.read() as res:
         print(res.decode("utf-8"))
