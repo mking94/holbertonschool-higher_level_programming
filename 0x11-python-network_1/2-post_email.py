@@ -6,8 +6,8 @@ import urllib.parse as p
 import sys
 
 if __name__ == "__main__":
-    data = p.urlencode({"email": sys.argv[2]}).encode("ascii")
+    d = p.urlencode({"email": sys.argv[2]}).encode("ascii")
 
-    reqs = req.Request(sys.argv[1], data)
+    reqs = req.Request(url=sys.argv[1], method="POST", data=d)
     with req.urlopen(reqs) as res:
         print(res.read().decode("utf-8"))
