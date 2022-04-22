@@ -7,6 +7,6 @@ import sys
 if len(sys.argv) != 2:
     print("Check the argument")
 else:
-    d = {"email": sys.argv[1]}
-    res = requests.post(url=sys.argv[2], d)
+    d = {"email": sys.argv[2]}
+    res = requests.post(url=sys.argv[1], data=d)
     print(res.text)
