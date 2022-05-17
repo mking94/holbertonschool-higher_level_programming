@@ -14,8 +14,7 @@ req.catch((error) => {
 });
 
 req.then(res => {
-  if (res && check == 0) {
+  if (res && check === 0) {
     console.log('code: ' + res.status);
-    return;
   }
 });
