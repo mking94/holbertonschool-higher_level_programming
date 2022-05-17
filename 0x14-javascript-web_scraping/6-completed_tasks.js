@@ -11,23 +11,18 @@ async function start () {
       tab = res.data;
     }
   });
-  let usertask = [];
-  for(let i = 0; i < tab.length; i++)
-  {
-    if(tab[i].completed)
-    {
-      if(usertask[tab[i].userId] == null)
-      {
+  const usertask = [];
+  for (let i = 0; i < tab.length; i++) {
+    if (tab[i].completed) {
+      if (usertask[tab[i].userId] == null) {
         usertask[tab[i].userId] = 0;
       }
-      usertask[tab[i].userId] += 1; 
+      usertask[tab[i].userId] += 1;
     }
   }
-  let element = {}
-  for(let i = 0; i < usertask.length; i++)
-  {
-    if(usertask[i] != null)
-    {
+  const element = {};
+  for (let i = 0; i < usertask.length; i++) {
+    if (usertask[i] != null) {
       element[i] = usertask[i];
     }
   }
