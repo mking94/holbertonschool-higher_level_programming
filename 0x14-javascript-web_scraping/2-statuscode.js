@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const axios = require('axios');
-const req = axios({
+axios({
   method: 'GET',
   url: process.argv[2]
 }).then(res => {
