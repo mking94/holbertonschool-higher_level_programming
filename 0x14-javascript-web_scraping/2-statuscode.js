@@ -5,17 +5,17 @@ const req = axios({
   method: 'GET',
   url: process.argv[2]
 });
-
+let check = 0;
 req.catch((error) => {
   if (error.response) {
     console.log('code: ' + error.response);
-    process.exit();
+    check = 1;
   }
 });
 
 req.then(res => {
-  if (res) {
+  if (res && check == 0) {
     console.log('code: ' + res.status);
-    process.exit();
+    return;
   }
 });
