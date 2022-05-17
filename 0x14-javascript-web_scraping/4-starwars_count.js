@@ -5,7 +5,7 @@ let tab;
 async function start () {
   await axios({
     method: 'GET',
-    url: 'https://swapi-api.hbtn.io/api/films/'
+    url: process.argv[2]
   }).then(res => {
     if (res) {
       tab = res.data.results;
