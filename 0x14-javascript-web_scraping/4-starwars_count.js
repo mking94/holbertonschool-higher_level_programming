@@ -1,31 +1,34 @@
 #!/usr/bin/node
 
 const axios = require('axios');
-let count = 0;
-axios({
+let tab;
+async function start()
+{
+await axios({
   method: 'GET',
   url: 'https://swapi-api.hbtn.io/api/films/'
 }).then(res => {
   if (res) {
-    let i = 0;
-    while(res.data.results[i])
-    {
-        let j = 0;
-        while(res.data.results[i].characters[j])
-        {
-            let req = require('axios');
-            axios({
-                method: 'GET',
-                url: characters[j] 
-            }).then(res => {
-                if(res.data.name == "Wedge Antilles")
-                {
-                    count++;
-                }
-            })
-            j++;
-        }
-    }
-  }
+   tab = res.data.results; 
+}
 });
+
+
+link = [];
+let i = 0;
+while(tab[i])
+{
+link = link.concat(tab[i].characters);
+i++;
+}
+
+var count = link.reduce((acc,curr) => {
+    if(curr.endsWith("/18/"))
+       acc++;
+    return acc;
+},0);
+
 console.log(count);
+}
+
+start();
