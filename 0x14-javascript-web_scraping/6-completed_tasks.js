@@ -23,16 +23,14 @@ async function start () {
       usertask[tab[i].userId] += 1; 
     }
   }
-  let str = "'{";
+  let element = {}
   for(let i = 0; i < usertask.length; i++)
   {
     if(usertask[i] != null)
     {
-      str = str + "'"+ i +"': " + usertask[i] + ",";
+      element[i] = usertask[i];
     }
   }
-  str = str.substring(0, str.length - 1) + "}'";
-  //obj = JSON.parse(str);
-  console.log(str);
+  console.log(element);
 }
 start();
