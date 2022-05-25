@@ -1,1 +1,1 @@
-document.getElementsByTagName('header')[0].style.color = '#FF0000';
+document.querySelector('HEADER').style.color = '#FF0000';
